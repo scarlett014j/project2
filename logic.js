@@ -11,3 +11,23 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   id: "mapbox/streets-v11",
   accessToken: API_KEY
 }).addTo(myMap);
+
+d3.csv("locations.csv").then(function(liquor_location) {
+  console.log(liquor_location)
+  liquor_location.forEach(row => {
+    var marker = L.marker([row.lat, row.long], {
+      opacity: 1
+    }).bindPopup(row.name)
+    marker.addTo(myMap)
+    
+  }); 
+  // var markers = L.marker([row.lat, row.long]);
+  // for (var i = 0; i < liquor_location.length; i++) {
+  //   var location = liquor_location[i].location;
+  //   if (location) {
+
+  //     markers.addLayer(L.marker([location.lat, location.long)
+  //       .bindPopup(response[i].descriptor));
+  //   }
+  // myMap.addLayer(markers);
+});
