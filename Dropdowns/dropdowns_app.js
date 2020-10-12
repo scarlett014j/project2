@@ -1,5 +1,6 @@
 let ingredientsSelectedMap = {};
 let ingredientsToDrinkMap = {};
+let drinks = [];
 
 d3.csv("full_drinks_copy.csv").then(function(csvData) {
     csvData.forEach(function(data) {
@@ -16,7 +17,21 @@ d3.csv("full_drinks_copy.csv").then(function(csvData) {
             }
         }
     });
-    var svg = d3.select("#ingredients1")
+    d3.select("#ingredients1")
+        .selectAll('option')
+        .data(Object.keys(ingredientsSelectedMap))
+        .enter()
+        .append('option')
+        .text(ingr => ingr)
+        .attr("value", ingr => ingr);
+    d3.select("#ingredients2")
+        .selectAll('option')
+        .data(Object.keys(ingredientsSelectedMap))
+        .enter()
+        .append('option')
+        .text(ingr => ingr)
+        .attr("value", ingr => ingr);
+    d3.select("#ingredients3")
         .selectAll('option')
         .data(Object.keys(ingredientsSelectedMap))
         .enter()
@@ -26,10 +41,22 @@ d3.csv("full_drinks_copy.csv").then(function(csvData) {
 });
 
 function onSelect(selectedItem) {
+    drinks = ingredientsToDrinkMap[selectedItem.value];
     d3.selectAll('li').remove()
     d3.select("#drinks")
         .selectAll('li')
-        .data(ingredientsToDrinkMap[selectedItem.value])
+        .data(drinks)
+        .enter()
+        .append('li')
+        .text(drink => drink)
+}
+
+function onSelect2(selectedItem) {
+    drinks = drinks.filter(value => ingredientsToDrinkMap[selectedItem.value].includes(value))
+    d3.selectAll('li').remove()
+    d3.select("#drinks")
+        .selectAll('li')
+        .data(drinks)
         .enter()
         .append('li')
         .text(drink => drink)
