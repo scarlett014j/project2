@@ -61,3 +61,14 @@ function onSelect2(selectedItem) {
         .append('li')
         .text(drink => drink)
 }
+
+function onSelect3(selectedItem) {
+    drinks = drinks.filter(value => ingredientsToDrinkMap[selectedItem.value].includes(value))
+    d3.selectAll('li').remove()
+    d3.select("#drinks")
+        .selectAll('li')
+        .data(drinks)
+        .enter()
+        .append('li')
+        .text(drink => drink)
+}
