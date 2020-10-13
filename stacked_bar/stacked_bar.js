@@ -1,5 +1,5 @@
-d3.json("full_drinks.json").then(function(drinkData) {
-    console.log(drinkData);
+d3.json("full_drinks.json").then(function(data) {
+    console.log(data);
     });
 
 
