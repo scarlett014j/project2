@@ -49,6 +49,24 @@
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script type="text/javascript" src="./dropdowns_app.js"></script>
   
+  
+  <input type="button" onclick="clearSelections()"
+         value="Clear Selections" /> 
+  <!––Button which avokes myFuction()--> 
+
+  <script> 
+      function clearSelections() { 
+          document.getElementById("ingredients1").innerHTML = 
+              null; 
+          document.getElementById("ingredients2").innerHTML = 
+              null; 
+          document.getElementById("ingredients3").innerHTML = 
+              null; 
+          document.getElementById("drinks").innerHTML = 
+              null; 
+      } 
+  </script>
+  
   </body>
   </html>
 </html>

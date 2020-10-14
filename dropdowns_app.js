@@ -24,11 +24,7 @@ d3.csv("full_drinks_copy.csv").then(function(csvData) {
             }
         }
         drinksToIngredients[data.name.toLowerCase()] = ingredients;
-    });
-    
-  
-
-    
+    }); 
     d3.select("#ingredients1")
         .selectAll('option')
         .data(Object.keys(ingredientsSelectedMap))
@@ -44,7 +40,6 @@ d3.csv("full_drinks_copy.csv").then(function(csvData) {
         .text(ingr => ingr)
         .attr("value", ingr => ingr);
 });
-
 function onSelect(selectedItem) {
     let dropdown = new Set();
     drinks = ingredientsToDrinkMap[selectedItem.value];
@@ -74,7 +69,6 @@ function onSelect(selectedItem) {
         .append('li')
         .text(drink => drink)
 }
-
 function onSelect2(selectedItem) {
     drinks2 = drinks.filter(value => ingredientsToDrinkMap[selectedItem.value].includes(value))
 
@@ -105,7 +99,6 @@ function onSelect2(selectedItem) {
         .append('li')
         .text(drink => drink)
 }
-
 function onSelect3(selectedItem) {
     drinks3 = drinks2.filter(value => ingredientsToDrinkMap[selectedItem.value].includes(value))
     d3.selectAll('li').remove()
