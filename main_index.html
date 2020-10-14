@@ -35,38 +35,21 @@
   
   <h2>Pick an Ingredient</h2>
   <p>Select up to 3 ingredients to include in your cocktail:</p>
-  
+
   <div class="dropdown">
     <select id="ingredients1" onchange="onSelect(this)">
-    </select>
+      </select>
     <select id="ingredients2" onchange="onSelect2(this)">
     </select>
     <select id="ingredients3" onchange="onSelect3(this)">
-    </select>
+    </select> 
   </div>
   <ul id="drinks">
   </ul>
+  <input type="button" onclick="resetSelections()"
+         value="Reset Selections" /> 
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script type="text/javascript" src="./dropdowns_app.js"></script>
-  
-  
-  <input type="button" onclick="clearSelections()"
-         value="Clear Selections" /> 
-  <!––Button which avokes myFuction()--> 
-
-  <script> 
-      function clearSelections() { 
-          document.getElementById("ingredients1").innerHTML = 
-              null; 
-          document.getElementById("ingredients2").innerHTML = 
-              null; 
-          document.getElementById("ingredients3").innerHTML = 
-              null; 
-          document.getElementById("drinks").innerHTML = 
-              null; 
-      } 
-  </script>
-  
   </body>
   </html>
 </html>
