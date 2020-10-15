@@ -66,6 +66,9 @@ function onSelect(selectedItem) {
         .data(drinks)
         .enter()
         .append('li')
+        .insert("a", ":first-child")
+        .attr('href', "https://www.google.com")
+        .attr('target', "_blank")
         .text(drink => drink)
 }
 function onSelect2(selectedItem) {
@@ -102,6 +105,9 @@ function onSelect2(selectedItem) {
         .data(drinks2)
         .enter()
         .append('li')
+        .insert("a", ":first-child")
+        .attr('href', "https://www.google.com")
+        .attr('target', "_blank")
         .text(drink => drink);
 }
 function onSelect3(selectedItem) {
@@ -116,6 +122,9 @@ function onSelect3(selectedItem) {
         .data(drinks3)
         .enter()
         .append('li')
+        .insert("a", ":first-child")
+        .attr('href', "https://www.google.com")
+        .attr('target', "_blank")
         .text(drink => drink);
 }
 
@@ -141,3 +150,4 @@ function resetSelections() {
     selectedItem2 = "";
     selectedItem3 = "";
 }
+
