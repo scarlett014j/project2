@@ -67,7 +67,7 @@ function onSelect(selectedItem) {
         .enter()
         .append('li')
         .insert("a", ":first-child")
-        .attr('href', "https://www.google.com")
+        .attr('href', "/drink.html?drink=")
         .attr('target', "_blank")
         .text(drink => drink)
 }
@@ -123,7 +123,7 @@ function onSelect3(selectedItem) {
         .enter()
         .append('li')
         .insert("a", ":first-child")
-        .attr('href', "https://www.google.com")
+        .attr('href', drink => `/drink.html?drink=${encodeURIComponent(drink)}`)
         .attr('target', "_blank")
         .text(drink => drink);
 }
