@@ -66,8 +66,8 @@ function onSelect(selectedItem) {
         .data(drinks)
         .enter()
         .append('li')
-        .insert("a", ":first-child")
-        .attr('href', "/drink.html?drink=")
+        .insert("a")
+        .attr('href', drink => `/drink.html?drink=${encodeURIComponent(drink)}`)
         .attr('target', "_blank")
         .text(drink => drink)
 }
@@ -105,8 +105,8 @@ function onSelect2(selectedItem) {
         .data(drinks2)
         .enter()
         .append('li')
-        .insert("a", ":first-child")
-        .attr('href', "https://www.google.com")
+        .insert("a")
+        .attr('href', drink => `/drink.html?drink=${encodeURIComponent(drink)}`)
         .attr('target', "_blank")
         .text(drink => drink);
 }
@@ -122,7 +122,7 @@ function onSelect3(selectedItem) {
         .data(drinks3)
         .enter()
         .append('li')
-        .insert("a", ":first-child")
+        .insert("a")
         .attr('href', drink => `/drink.html?drink=${encodeURIComponent(drink)}`)
         .attr('target', "_blank")
         .text(drink => drink);
