@@ -94,7 +94,7 @@ var clusters =
     {"name":"Grass Skirt",},
     {"name":"Hawaiian Cocktail",},
     {"name":"Jewel of the Nile",},
-    {"name":"Lady LOve Fizz",},
+    {"name":"Lady Love Fizz",},
     {"name":"London Town",},
     {"name":"Lone Tree Cocktail",},
     {"name":"Lone Tree Cooler",},
@@ -341,10 +341,15 @@ var svg = d3.select("#plot").append("svg")
 
   node.append("circle")
       .attr("r", 4.5);
-
+console.log(clusters.children[0])
   node.append("text")
       .attr("dx", function(d) { return d.children ? -8 : 8; })
       .attr("dy", 3)
+      .insert("a")
+    //   console.log(d.children)
+      .attr('href', function(d) { return `https://www.google.com/search?q=${d.name} drink` })
+    //   console.log(d.name.children)
+      .attr('target', "_blank")
       .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
       .text(function(d) { return d.name; });
 
