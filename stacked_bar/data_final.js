@@ -1,4 +1,4 @@
-var data = [{drink: '3-Mile Long Island Iced Tea',
+var drinkData = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Gin', unit: 0.5},
    {name: 'Light rum', unit: 0.5},
    {name: 'Tequila', unit: 0.5},
