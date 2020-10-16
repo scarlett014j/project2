@@ -1,1 +1,6 @@
+<<<<<<< HEAD
+{"children":[{"name":"coca-cola", "colname":"level2"},{"name":"lemon juice","children":[{"name":"Galliano",{"children":[
+            {"name":"Sirup of roses","colname":"level4"},"colname":"level3"}}]"colname":"level2"}],"name":"peach vodka"}
+=======
 {"children”:[{“name”:”mister_a”,”children":[{"name":"mister_b”,”colname":"level4”}],”colname":"level3”}][{“name":"boss1","children":[{"name":"mister_a","colname":"level3"}],"colname":"level2"}],"name":"CEO"}
+>>>>>>> 489291ca8aab9c35645924a42e35e321592f77a2
