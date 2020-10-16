@@ -330,7 +330,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Triple sec', unit: 0.5},
    {name: 'Amaretto', unit: 3},
    {name: 'Cider', unit: 0.5},
-   {name: 'Ice', unit: 'Add 0.5 cup '}
+   {name: 'Ice', unit: 6}
 
 
    ]},
@@ -383,7 +383,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
 
    ]},
  {drink: 'Arise My Love',
-  parts: [{name: 'Champagne', unit: 'Chilled '},
+  parts: [{name: 'Champagne', unit: 8},
    {name: 'Green Creme de Menthe', unit: 0.5}
 
 
@@ -419,7 +419,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    {name: 'Southern Comfort', unit: 2},
    {name: 'Passion fruit syrup', unit: 2},
    {name: 'Sweet and sour', unit: 6},
-   {name: 'Club soda', unit: '1 dash '}
+   {name: 'Club soda', unit: 0.01}
 
    ]},
  {drink: 'Atomic Lokade',
@@ -432,7 +432,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    ]},
  {drink: 'Autodafé',
   parts: [{name: 'Vodka', unit: 4},
-   {name: 'Lime juice', unit: '1 dash '},
+   {name: 'Lime juice', unit: 0.01},
    {name: 'Soda water', unit: 0}
 
 
@@ -475,7 +475,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    {name: 'Galliano', unit: 1.5},
    {name: 'Pineapple Juice', unit: 6},
    {name: 'Lime Juice', unit: 1},
-   {name: 'Prosecco', unit: 'top up '}
+   {name: 'Prosecco', unit: 3}
 
    ]},
  {drink: 'Bellini',
@@ -978,8 +978,8 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Gin', unit: 2},
    {name: 'Carbonated water', unit: 8},
    {name: 'Powdered sugar', unit: 0},
-   {name: 'Orange spiral', unit: 0},
-   {name: 'Lemon peel', unit: 0}
+   {name: 'Orange spiral', unit: 1},
+   {name: 'Lemon peel', unit: 1}
 
    ]},
  {drink: 'Gin Daisy',
@@ -994,7 +994,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Gin', unit: 2},
    {name: 'Lemon', unit: 0.5},
    {name: 'Powdered sugar', unit: 0.1},
-   {name: 'Carbonated water', unit: 0}
+   {name: 'Carbonated water', unit: 6}
 
 
    ]},
@@ -1185,7 +1185,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
  {drink: 'Ice Pick #1',
   parts: [{name: 'Vodka', unit: 1.5},
    {name: 'Iced tea', unit: 6},
-   {name: 'Lemon juice', unit: ' to taste\n'}
+   {name: 'Lemon juice', unit: 0.5}
 
 
 
@@ -1195,15 +1195,15 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    {name: 'Blended whiskey', unit: 1.5},
    {name: 'Lemon', unit: 0.5},
    {name: 'Powdered sugar', unit: 0.1},
-   {name: 'Carbonated water', unit: 0}
+   {name: 'Carbonated water', unit: 8}
 
    ]},
  {drink: 'Ipamena',
-  parts: [{name: 'Lime', unit: '½'},
+  parts: [{name: 'Lime', unit: .5},
    {name: 'Brown sugar', unit: 0.5},
    {name: 'Passion fruit juice', unit: 4},
-   {name: 'Ginger ale', unit: 'top up with'},
-   {name: 'Ice', unit: 'fill'}
+   {name: 'Ginger ale', unit: 6},
+   {name: 'Ice', unit: 0}
 
    ]},
  {drink: 'Irish Spring',
@@ -1351,10 +1351,10 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
 
    ]},
  {drink: 'Lone Tree Cooler',
-  parts: [{name: 'Carbonated water', unit: 0},
-   {name: 'Gin', unit: 0},
-   {name: 'Dry Vermouth', unit: 0},
-   {name: 'Powdered sugar', unit: 0},
+  parts: [{name: 'Carbonated water', unit: 6},
+   {name: 'Gin', unit: 2},
+   {name: 'Dry Vermouth', unit: .3},
+   {name: 'Powdered sugar', unit: .05},
    {name: 'Orange spiral', unit: 0},
    {name: 'Lemon peel', unit: 0}
    ]},
@@ -1378,7 +1378,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Vodka', unit: 5},
    {name: 'Lime', unit: '2-Jan'},
    {name: 'Angostura bitters', unit: 0.5},
-   {name: 'Tonic water', unit: '1 dl Schweppes '},
+   {name: 'Tonic water', unit: 6},
    {name: 'Ice', unit: 4}
 
    ]},
@@ -1444,7 +1444,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    {name: 'Bourbon', unit: 0.5},
    {name: 'Lemon', unit: 0.5},
    {name: 'Powdered sugar', unit: 0.3},
-   {name: 'Carbonated water', unit: 0}
+   {name: 'Carbonated water', unit: 8}
    ]},
  {drink: 'Monkey Gland',
   parts: [{name: 'Gin', unit: 2},
@@ -1482,7 +1482,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Blended whiskey', unit: 2},
    {name: 'Lemon', unit: 0.5},
    {name: 'Sugar', unit: 0.1},
-   {name: 'Red wine', unit: ' (Claret)\n'},
+   {name: 'Red wine', unit: 4},
    {name: 'Lemon', unit: 0},
    {name: 'Cherry', unit: 0}
    ]},
@@ -1708,7 +1708,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Gin', unit: 1},
    {name: 'Sweet and sour', unit: 2},
    {name: 'Egg', unit: 1},
-   {name: 'Coca-Cola', unit: 0}
+   {name: 'Coca-Cola', unit: 6}
 
 
    ]},
@@ -1750,7 +1750,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    {name: 'Powdered sugar', unit: 0.05},
    {name: 'Bitters', unit: 0.01},
    {name: 'Water', unit: 0.1},
-   {name: 'Lime peel', unit: 0}
+   {name: 'Lime peel', unit: 1}
    ]},
  {drink: 'Rum Screwdriver',
   parts: [{name: 'Light rum', unit: 1.5},
@@ -2249,7 +2249,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
 
    ]},
  {drink: 'A True Amaretto Sour',
-  parts: [{name: 'Amaretto', unit: '1 jigger '},
+  parts: [{name: 'Amaretto', unit: 1.5},
    {name: 'Lemon', unit: 0.5},
    {name: 'Ice', unit: 0},
    {name: 'Maraschino cherry', unit: 0}
@@ -2323,7 +2323,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
  {drink: 'Addington',
   parts: [{name: 'Sweet Vermouth', unit: 2},
    {name: 'Dry Vermouth', unit: 1},
-   {name: 'Soda Water', unit: 'Top up with\n'}
+   {name: 'Soda Water', unit: 6}
 
 
 
@@ -2453,7 +2453,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
  {drink: 'Banana Cream Pi',
   parts: [{name: 'Malibu Rum', unit: 1},
    {name: 'Banana Liqueur', unit: 1},
-   {name: 'Pineapple Juice', unit: 'Top'}
+   {name: 'Pineapple Juice', unit: 6}
 
 
 
@@ -2480,14 +2480,14 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    {name: 'Passoa', unit: 1},
    {name: 'Blue Curacao', unit: 1},
    {name: 'Sweet and Sour', unit: 6},
-   {name: 'Ice', unit: 'cubes'}
+   {name: 'Ice', unit: 0}
    ]},
  {drink: 'Blueberry Mojito',
   parts: [{name: 'Dark Rum', unit: 2},
    {name: 'Lime Juice', unit: 1},
-   {name: 'Sugar', unit: 'Dash'},
-   {name: 'Blueberries', unit: 'Whole'},
-   {name: 'Lemon-lime soda', unit: 'Top'}
+   {name: 'Sugar', unit: .01},
+   {name: 'Blueberries', unit: 0},
+   {name: 'Lemon-lime soda', unit: 6}
 
    ]},
  {drink: 'Bombay Cassis',
@@ -2496,7 +2496,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    {name: 'Fresh Lime Juice', unit: 15},
    {name: 'Ginger beer', unit: 75},
    {name: 'Lime', unit: 1},
-   {name: 'Ginger', unit: '1 long strip'}
+   {name: 'Ginger', unit: 1}
    ]},
  {drink: 'Bora Bora',
   parts: [{name: 'Pineapple juice', unit: 10},
@@ -2517,9 +2517,9 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
  {drink: 'Bounty Hunter',
   parts: [{name: 'Rum', unit: 1},
    {name: 'Coconut Liqueur', unit: 1},
-   {name: 'Blueberries', unit: 'Garnish with'},
-   {name: 'Pineapple Juice', unit: 'Dash'},
-   {name: 'Prosecco', unit: 'Top'}
+   {name: 'Blueberries', unit: 0},
+   {name: 'Pineapple Juice', unit: .1},
+   {name: 'Prosecco', unit: 4}
 
    ]},
  {drink: 'Brigadier',
@@ -2592,7 +2592,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Cointreau', unit: 0.5},
    {name: 'Vodka', unit: 1},
    {name: 'Lime', unit: 0.5},
-   {name: 'Cranberry juice', unit: '1 splash '}
+   {name: 'Cranberry juice', unit: .5}
 
 
    ]},
@@ -2614,7 +2614,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    ]},
  {drink: 'Death in the Afternoon',
   parts: [{name: 'Absinthe', unit: 2},
-   {name: 'Champagne', unit: 'Top'}
+   {name: 'Champagne', unit: 4}
 
 
 
@@ -2697,7 +2697,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    {name: 'Apricot Nectar', unit: 1},
    {name: 'Pomegranate juice', unit: 1},
    {name: 'lemon', unit: 0.5},
-   {name: 'Soda Water', unit: 'Top'}
+   {name: 'Soda Water', unit: 4}
 
    ]},
  {drink: 'Gagliardo',
@@ -2728,8 +2728,8 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Gin', unit: 2},
    {name: 'Grenadine', unit: 0.5},
    {name: 'lemon', unit: 0.5},
-   {name: 'Soda Water', unit: 'Top up with'},
-   {name: 'Lime', unit: 'Garnish'}
+   {name: 'Soda Water', unit: 4},
+   {name: 'Lime', unit: 1}
 
    ]},
  {drink: 'Greyhound',
@@ -2777,13 +2777,13 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
    {name: 'Vodka', unit: 1},
    {name: 'Grenadine', unit: 0.5},
    {name: 'Lime juice', unit: 1},
-   {name: 'Sugar', unit: 'Around rim put 1 pinch '},
+   {name: 'Sugar', unit: 0},
    {name: 'Sugar syrup', unit: 0.5},
-   {name: 'Soda water', unit: 'Fill to top with '}   ]},
+   {name: 'Soda water', unit: 4}   ]},
  {drink: 'Lazy Coconut Paloma',
   parts: [{name: 'Coconut Liqueur', unit: 30},
    {name: 'Grapefruit Juice', unit: 75},
-   {name: 'Soda Water', unit: 'Top'}
+   {name: 'Soda Water', unit: 100}
 
 
 
@@ -2845,9 +2845,9 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
 
    ]},
  {drink: 'Miami Vice',
-  parts: [{name: '151 proof rum', unit: 5},
-   {name: 'Pina colada mix', unit: 'frozen '},
-   {name: 'Daiquiri mix', unit: 'frozen '}
+  parts: [{name: '151 proof rum', unit: 2},
+   {name: 'Pina colada mix', unit: 2},
+   {name: 'Daiquiri mix', unit: 2}
 
 
 
@@ -2871,9 +2871,9 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
  {drink: 'Mojito #3',
   parts: [{name: 'Mint', unit: 0},
    {name: 'Lemon juice', unit: 3},
-   {name: 'Dark rum', unit: '1/8 L Jamaican '},
-   {name: 'Club soda', unit: '1/8 L '},
-   {name: 'Angostura bitters', unit: '8 drops '}
+   {name: 'Dark rum', unit: 4},
+   {name: 'Club soda', unit: 4},
+   {name: 'Angostura bitters', unit: .08}
 
    ]},
  {drink: 'Munich Mule',
@@ -2973,9 +2973,9 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
 
    ]},
  {drink: 'Rail Splitter',
-  parts: [{name: 'Sugar syrup', unit: 2},
-   {name: 'Lemon juice', unit: '?'},
-   {name: 'Ginger ale', unit: '?'}
+  parts: [{name: 'Sugar syrup', unit: .2},
+   {name: 'Lemon juice', unit: .5},
+   {name: 'Ginger ale', unit: 6}
 
 
 
@@ -2992,7 +2992,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Gin', unit: 50},
    {name: 'Blue Curacao', unit: 15},
    {name: 'Tonic Water', unit: 100},
-   {name: 'Rosemary', unit: 'Garnish with'}
+   {name: 'Rosemary', unit: 1}
 
 
    ]},
@@ -3008,8 +3008,8 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
   parts: [{name: 'Gin', unit: 50},
    {name: 'Chocolate liqueur', unit: 30},
    {name: 'Amaretto', unit: 15},
-   {name: 'Chocolate Sauce', unit: 'Garnish'},
-   {name: 'Salted Chocolate', unit: 'Grated'}
+   {name: 'Chocolate Sauce', unit: 0},
+   {name: 'Salted Chocolate', unit: 0}
 
    ]},
  {drink: 'Shark Attack',
@@ -3039,7 +3039,7 @@ var data = [{drink: '3-Mile Long Island Iced Tea',
  {drink: 'Spritz Veneziano',
   parts: [{name: 'Prosecco', unit: 6},
    {name: 'Aperol', unit: 4},
-   {name: 'Soda Water', unit: 'Top'}
+   {name: 'Soda Water', unit: 6}
 
 
 
