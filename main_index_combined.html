@@ -19,15 +19,15 @@
   
   <body>
 
-  <h1>Title Here</h1>
-
   <div class='sidebar'>
     <h3>Liquor Stores in Atlanta</h3>
         <!-- The div where we will inject our map -->
     <div id='map' class='map'></div>
   </div>
+
+  <h1>Title Here</h1>
   
-  <h3>Select up to 3 ingredients to include in your cocktail:</h3>
+  <h2>Select up to 3 ingredients to include in your cocktail:</h2>
   <div class='dropdown'>
     <select id="ingredients1" onchange="onSelect(this)">
       </select>
@@ -43,12 +43,12 @@
   <input type="button" onclick="resetSelections()"
       value="Reset Selections" /> 
 
-  <h3>Drink Options Using Selected Ingredient(s):</h3>
+  <h2>Drink Options Using Selected Ingredient(s):</h2>
   <ul id="drinks">
   </ul>
   </p>
 
-  <a href="D3work/flare_2.html" target = "_blank"><button>Click here to see breakdown of drinks based on standard liquors</button></a>
+  <a href="D3work/flare_2.html" target = "_blank"><button>Breakdown of drinks based on standard liquors</button></a>
 
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script type="text/javascript" src="./dropdowns_app.js"></script>
