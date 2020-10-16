@@ -1,0 +1,21 @@
+body {
+    padding: 50;
+    margin: 50;
+  }
+
+.sidebar {
+    float: right;                  
+    width: 35%;
+    height: 750px;
+    background-color: #F09A9D;
+  }
+
+.map {
+    height: inherit;
+    width: 100%;
+  }
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+  }

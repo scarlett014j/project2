@@ -1,35 +1,34 @@
   <!DOCTYPE html>
   <html>
+
   <head>
+  <title>Cocktail Data</title>
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
   <meta charset="utf-8">
-   <!-- JS -->
-   <!-- <script type="text/javascript" src="Map Visualization/logic.js"></script> -->
 
   <!-- Leaflet CSS -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
-    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
-    crossorigin="" />
+      integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+      crossorigin="" />
 
-  <!-- Map CSS -->
-  <link rel="stylesheet" type="text/css" href="Map Visualization/style.css">
-  <style>
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
-  }
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./style.css">
 
-  .show {display: block;}
-  </style>
   </head>
-  <body>
   
-  <h2>Pick an Ingredient</h2>
-  <p>Select up to 3 ingredients to include in your cocktail:</p>
+  <body>
 
-  <div class="dropdown">
+  <h1>Title Here</h1>
+
+  <div class='sidebar'>
+    <h3>Liquor Stores in Atlanta</h3>
+        <!-- The div where we will inject our map -->
+    <div id='map' class='map'></div>
+  </div>
+  
+  <h3>Select up to 3 ingredients to include in your cocktail:</h3>
+  <div class='dropdown'>
     <select id="ingredients1" onchange="onSelect(this)">
       </select>
       </p>
@@ -42,16 +41,15 @@
   </p>  
 
   <input type="button" onclick="resetSelections()"
-         value="Reset Selections" /> 
+      value="Reset Selections" /> 
 
-  <p>Drink Options Using Selected Ingredient(s):</p>
+  <h3>Drink Options Using Selected Ingredient(s):</h3>
   <ul id="drinks">
   </ul>
   </p>
 
-  <!-- The div where we will inject our map -->
-  <div id="map"></div>
-  
+  <a href="D3work/flare_2.html" target = "_blank"><button>Click here to see breakdown of drinks based on standard liquors</button></a>
+
   <script src="https://d3js.org/d3.v5.min.js"></script>
   <script type="text/javascript" src="./dropdowns_app.js"></script>
   <!-- Leaflet JS -->
@@ -63,7 +61,6 @@
   <!-- JS -->
   <script type="text/javascript" src="Map Visualization/logic.js"></script>
 
-    </body>
+  </body>
 
-  </html>
-  </html>
+</html>

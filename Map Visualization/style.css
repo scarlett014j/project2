@@ -4,10 +4,15 @@ body {
     margin: 50;
   }
   
-  /* set map, body, and html to 100% of the screen size */
-  #map,
-  body,
-  html {
+/*set map, body, and html to 100% of the screen size */
+map {
     height: 400px;
     width: 600px;
+  }
+
+.sidebar {
+    float: right;                  
+    width: 400px;
+    height: 800px;
+    background-color: #F09A9D;
   }
