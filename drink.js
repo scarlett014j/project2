@@ -4,11 +4,13 @@ const drink = urlParams.get('drink');
 let drinksToInstructions = {};
 let drinksToImage = {};
 let drinksToIngredientsAndMeasurement = {};
+let drinksToGlass = {};
 
 d3.csv("full_drinks_copy.csv").then(function(csvData) {
     csvData.forEach(function(data) {
         drinksToInstructions[data.name] = data.instructions;
         drinksToImage[data.name] = data.image_url;
+        drinksToGlass[data.name] = data.glass;
         let ingredientsAndMeasurement = [];
         var i;
         for(i = 1; i <= 15; i++) {
@@ -21,13 +23,17 @@ d3.csv("full_drinks_copy.csv").then(function(csvData) {
         }
         drinksToIngredientsAndMeasurement[data.name] = ingredientsAndMeasurement;
     });
-
+    
     d3.select("#ingredients")
         .selectAll('li')
         .data(drinksToIngredientsAndMeasurement[drink])
         .enter()
         .append('li')
         .text(item => `${item.ingredient} - ${item.measurement}`)
+
+    d3.select("#body")
+        .insert("p")
+        .text(drinksToGlass[drink]);
 
     d3.select("#body")
         .insert("p")
