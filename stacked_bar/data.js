@@ -6,17 +6,11 @@ var data = [{'drink': '3-Mile Long Island Iced Tea',
    {'unit': 'Vodka', 'name': '0.5'},
    {'unit': 'Coca-Cola', 'name': '0.5'},
    {'unit': 'Sweet and sour', 'name': '0.01'},
-   {'unit': 'Bitters', 'name': ''},
-   {'unit': 'Lemon', 'name': ''}]},
+   {'unit': 'Bitters', 'name': '0'},
+   {'unit': 'Lemon', 'name': '0'}]},
  {'drink': '410 Gone',
   'parts': [{'unit': 'Peach Vodka', 'name': '3'},
    {'unit': 'Coca-Cola', 'name': '9'},
-
-
-
-
-
-
    ]},
  {'drink': '50/50',
   'parts': [{'unit': 'Vanilla vodka', 'name': '2.5'},
