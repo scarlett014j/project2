@@ -12,7 +12,7 @@ L.tileLayer("https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_toke
   accessToken: API_KEY
 }).addTo(myMap);
 
-d3.csv("locations.csv").then(function(liquor_location) {
+d3.csv("Map Visualization/locations.csv").then(function(liquor_location) {
   console.log(liquor_location)
   liquor_location.forEach(row => {
     var marker = L.marker([row.lat, row.long], {

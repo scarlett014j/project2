@@ -1,0 +1,69 @@
+  <!DOCTYPE html>
+  <html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- <script src="https://d3js.org/d3.v5.min.js"></script> -->
+  <meta charset="utf-8">
+   <!-- JS -->
+   <!-- <script type="text/javascript" src="Map Visualization/logic.js"></script> -->
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css"
+    integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+    crossorigin="" />
+
+  <!-- Map CSS -->
+  <link rel="stylesheet" type="text/css" href="Map Visualization/style.css">
+  <style>
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .show {display: block;}
+  </style>
+  </head>
+  <body>
+  
+  <h2>Pick an Ingredient</h2>
+  <p>Select up to 3 ingredients to include in your cocktail:</p>
+
+  <div class="dropdown">
+    <select id="ingredients1" onchange="onSelect(this)">
+      </select>
+      </p>
+    <select id="ingredients2" onchange="onSelect2(this)">
+      </select>
+      </p>
+    <select id="ingredients3" onchange="onSelect3(this)">
+      </select>    
+  </div>
+  </p>  
+
+  <input type="button" onclick="resetSelections()"
+         value="Reset Selections" /> 
+
+  <p>Drink Options Using Selected Ingredient(s):</p>
+  <ul id="drinks">
+  </ul>
+  </p>
+
+  <!-- The div where we will inject our map -->
+  <div id="map"></div>
+  
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script type="text/javascript" src="./dropdowns_app.js"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"
+      integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew=="
+      crossorigin=""></script>
+  <!-- API key -->
+  <script type="text/javascript" src="Map Visualization/config.js"></script>
+  <!-- JS -->
+  <script type="text/javascript" src="Map Visualization/logic.js"></script>
+
+    </body>
+
+  </html>
+  </html>
