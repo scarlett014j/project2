@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+.node circle {
+  fill: #fff;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.node {
+  font: 10px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: #ccc;
+  stroke-width: 1.5px;
+}
+
+</style>
+<body>
+
+<div id="elementSelector">
+<div id="plot"></div>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.5/d3.min.js"></script>
+<script>
+
+var clusters = 
+ {"name": "alcohol",
+ "children": [
+  {"name": "tequila",
+   "children": [
+    {"name": "3 Mile Long Island Iced Tea",},
+    {"name": "Bloody Maria",},
+    {"name": "Blue Margarita",},
+    {"name": "Gideon's Green Dinosaur",},
+    {"name":"Long Island Iced Tea",},
+    {"name":"Long Island Tea",},
+    {"name":"Margarita",},
+    {"name":"Radioctive Long Island Iced Tea",},
+    {"name":"Strawberry Margarita",},
+    {"name":"Tequila Fizz",},
+    {"name":"Tequila Sour",},
+    {"name":"Tommy's Margarita",},
+    {"name":"Vampiro",},
+    {"name":"Cheery Electric Lemonade",},
+    {"name":"Paloma",},
+    {"name":"Pineapple Paloma",},
+    {"name":"Smashed Watermelon Margarita",},
+    {"name":"Tequila Sunrise",},
+    ]},
+  {"name": "gin",
+   "children": [
+    {"name": "3 Mile Long Iced Tea",},
+    {"name": "69 Special",},
+    {"name": "Abbey Cocktail",},
+    {"name": "Alaska Cocktail",},
+    {"name": "Alexander",},
+    {"name": "Allies Cocktail",},
+    {"name": "Angel Face",},
+    {"name": "Archbishop",},
+    {"name": "Arthur Tompkins",},
+    {"name": "Artillery",},
+    {"name":"AT&T",},
+    {"name":"Bermuda Highball",},
+    {"name":"Bluebird",},
+    {"name":"Boomerang",},
+    {"name":"Bramble",},
+    {"name":"Casino",},
+    {"name":"Casino Royale",},
+    {"name":"Clover Club",},
+    {"name":"Derby",},
+    {"name":"Dragonfly",},
+    {"name":"Dubonnet Cocktail",},
+    {"name":"English Highball",},
+    {"name":"English Rose Cocktail",},
+    {"name":"Flying Dutchman",},
+    {"name":"French 75",},
+    {"name":"Gentleman's Club",},
+    {"name":"Gin and Tonic",},
+    {"name":"Gin Cooler",},
+    {"name":"Gin Daisy",},
+    {"name":"Gin Fizz",},
+    {"name":"Gin Sling",},
+    {"name":"Gin Smash",},
+    {"name":"Gin Sour",},
+    {"name":"Gin Squirt",},
+    {"name":"Gin Swizzle",},
+    {"name":"Gin Toddy",},
+    {"name":"Grass Skirt",},
+    {"name":"Hawaiian Cocktail",},
+    {"name":"Jewel of the Nile",},
+    {"name":"Lady Love Fizz",},
+    {"name":"London Town",},
+    {"name":"Lone Tree Cocktail",},
+    {"name":"Lone Tree Cooler",},
+    {"name":"Long Island Iced Tea",},
+    {"name":"Long Island Tea",},
+    {"name":"Monkey Gland",},
+    {"name":"National Aquarium",},
+    {"name":"Negroni",},
+    {"name":"Orange Oasis",},
+    {"name":"Paradise",},
+    {"name":"Pink Lady",},
+    {"name":"Poppy Cocktail",},
+    {"name":"Queen Elizabeth",},
+    {"name":"Radioctive Long Island Iced Tea",},
+    {"name":"Rose",},
+    {"name":"Royal Fizz",},
+    {"name":"Royal Gin Fizz",},
+    {"name":"Salty Dog",},
+    {"name":"Singapore Sling",},
+    {"name":"Surf City Lifeasaver",},
+    {"name":"Tom Collins",},
+    {"name":"Turf Cocktail",},
+    {"name":"Victor",},
+    {"name":"Waikiki Beachbomber",},
+    {"name":"White Lady",},
+    {"name":"A1",},
+    {"name":"Abbey Martini",},
+    {"name":"Ace",},
+    {"name":"Adam & Eve",},
+    {"name":"Addison",},
+    {"name":"Adios Amigos Cocktail",},
+    {"name":"Army Special",},
+    {"name":"Aviation",},
+    {"name":"Bijou",},
+    {"name":"Bombay Cassis",},
+    {"name":"Cherry Electric Lemonade",},
+    {"name":"Corpse Reviver 2",},
+    {"name":"Dry Martini",},
+    {"name":"French Negroni",},
+    {"name":"Gimlet",},
+    {"name":"Gin Basil Smash",},
+    {"name":"Gin Rickey",},
+    {"name":"Imperial Cocktail",},
+    {"name":"Jitterbug",},
+    {"name":"Martinez 2",},
+    {"name":"Martini",},
+    {"name":"Munich Mule",},
+    {"name":"Pegu Club",},
+    {"name":"Rosemary Blue",},
+    {"name":"Ruby Tuesday",},
+    {"name":"Salted Toffee Martini",},
+    {"name":"The Laverstoke",},
+    {"name":"The Philosopher",},
+    {"name":"Vesper",},
+    ]},
+  {
+   "name": "Bourbon",
+   "children": [
+   {"name":"Alleghany",},
+   {"name":"Bourbon Sling",},
+   {"name":"Bourbon Sour",},
+   {"name":"Classic Old-Fashioned",},
+   {"name":"John Collins",},
+   {"name":"Kentucky B and B",},
+   {"name":"Kentucky Colonel",},
+   {"name":"Midnight Cowboy",},
+   {"name":"Mint Julep",},
+   {"name":"Mississippi Planters Punch",},
+   {"name":"Sazerac",},
+   {"name":"Irish Curdling Cow",},
+   {"name":"Manhatten",},
+   {"name":"Old Fashioned",},
+   {"name":"Raspberry Julep",},
+  ]},
+  {
+   "name": "vodka",
+   "children": [
+    {"name": "3 Mile Long Island Iced Tea",},
+    {"name": "501 Blue",},
+    {"name":"A Midsummers Night Dream",},
+    {"name":"Adam Sunrise",},
+    {"name":"After Sex",},
+    {"name":"Atlantic Sun",},
+    {"name":"Atomic Lokade",},
+    {"name":"Autodafe",},
+    {"name":"Avalon",},
+    {"name":"Bellini Martini",},
+    {"name":"Black Russian",},
+    {"name":"Blody Mary",},
+    {"name":"Blue Lagoon",},
+    {"name":"Chocolate Black Russian",},
+    {"name":"Gideons Green Dinosaur",},
+    {"name":"Godchild",},
+    {"name":"Godmother",},
+    {"name":"Harvey Wallbanger",},
+    {"name":"Ice Pick 1",},
+    {"name":"Kamikaze",},
+    {"name":"Long Island Iced Tea",},
+    {"name":"Long Island Tea",},
+    {"name":"Long Vodka",},
+    {"name":"National Aquarium",},
+    {"name":"Oreo Mudslide",},
+    {"name":"Orgasm",},
+    {"name":"Pink Panty Pulldowns",},
+    {"name":"Popped Cherry",},
+    {"name":"Radioactive Long Island Iced Tea",},
+    {"name":"Russian Spring Punch",},
+    {"name":"San Francisco",},
+    {"name":"Screaming Orgasm",},
+    {"name":"Screwdriver",},
+    {"name":"Sea Breeze",},
+    {"name":"Sex on the Beach",},
+    {"name":"Victory Collins",},
+    {"name":"Vodka Tonic",},
+    {"name":"Vodka Martini",},
+    {"name":"Vodka Russian",},
+    {"name":"White Russian",},
+    {"name":"57 Chevy with a White License Plate",},
+    {"name":"155 Belmont",},
+    {"name":"747 Drink",},
+    {"name":"Gilligans Island",},
+    {"name":"A.D.M.",},
+    {"name":"Absolutely Fabulous",},
+    {"name":"Addison Special",},
+    {"name":"Arizona Twister",},
+    {"name":"Army Special",},
+    {"name":"Cherry Electric Lemonade",},
+    {"name":"Cosmopolitan",},
+    {"name":"Dirty Martini",},
+    {"name":"Espresso Martini",},
+    {"name":"French Martini",},
+    {"name":"Greyhound",},
+    {"name":"Irish Curdling Cow",},
+    {"name":"Jitterbug",},
+    {"name":"Passion Fruit Martini",},
+    {"name":"Shark Attcack",},
+    {"name":"Vesper",},
+    {"name":"Zorbatini",},
+    ]},
+  {
+   "name": "Rum",
+   "children": [
+   {"name":"Barracuda",},
+   {"name":"Hemingway Special",},
+   {"name":"National Aquarium",},
+   {"name":"Radioactive Long Island Iced Tea",},
+   {"name":"Rum Cooler",},
+   {"name":"Rum Toddy",},
+   {"name":"Adios Amigos Cocktail",},
+   {"name":"Bahama Mama",},
+   {"name":"Blue Hurricane",},
+   {"name":"Bounty Hunter",},
+   {"name":"Captain Kidd's Punch",},
+   {"name":"Espresso Rumtini",},
+   {"name":"Funk and Soul",},
+   {"name":"Spice 75",},
+   {"name":"Zippys Revenge",},
+   {"name":"Zombie",},
+    ]},
+  {
+   "name": "Scotch",
+   "children": [
+   {"name":"Affinity",},
+   {"name":"Balmoral",},
+   {"name":"Bobby Burns Cocktail",},
+   {"name":"Dry Rob Roy",},
+   {"name":"Flying Scotchman",},
+   {"name":"Godfather",},
+   {"name":"Highland Flying Cocktail",},
+   {"name":"Loch Lomond",},
+   {"name":"Rusty Nail",},
+   {"name":"Scotch Cobbler",},
+   {"name":"Scotch Sour",},
+   {"name":"Thriller",},
+   {"name":"Whiskey Mac",},
+   {"name":"Broadside",},
+    ]},
+   {
+   "name": "Whiskey",
+   "children": [
+   {"name":"Owens Grandmothers Revenge",},
+    ]},
+   {
+   "name": "Brandy",
+   "children": [
+   {"name":"Amaretto Shake",},
+   {"name":"Bermuda Highball",},
+   {"name":"Between The Sheets",},
+   {"name":"Boston Sidecar",},
+   {"name":"Brandy Alexander",},
+   {"name":"Brandy Cobbler",},
+   {"name":"Brandy Flip",},
+   {"name":"Brandy Sour",},
+   {"name":"City Slicker",},
+   {"name":"English Highball",},
+   {"name":"Gentlman's Club",},
+   {"name":"Horses Neck",},
+   {"name":"Mississippi Planters Punch",},
+   {"name":"Port Wine Cocktail",},
+   {"name":"Quakers Cocktail",},
+   {"name":"Scooter",},
+   {"name":"Scotch Cobbler",},
+   {"name":"Sidecar Cocktail",},
+   {"name":"Sol Y Sombra",},
+   {"name":"Stinger",},
+   {"name":"Victor",},
+]},
+]}
+
+
+
+var width = 1000,
+    height = 2200;
+
+var cluster = d3.layout.cluster()
+    .size([height, width - 160]);
+
+var diagonal = d3.svg.diagonal()
+    .projection(function(d) { return [d.y, d.x]; });
+
+var svg = d3.select("#plot").append("svg")
+    .attr("width", width)
+    .attr("height", height)
+  .append("g")
+    .attr("transform", "translate(40,0)");
+
+// d3.json("https://bl.ocks.org/mbostock/raw/4063550/flare.json", function(error, root) {
+//   if (error) throw error;
+
+  var nodes = cluster.nodes(clusters),
+      links = cluster.links(nodes);
+
+  var link = svg.selectAll(".link")
+      .data(links)
+    .enter().append("path")
+      .attr("class", "link")
+      .attr("d", diagonal);
+
+  var node = svg.selectAll(".node")
+      .data(nodes)
+    .enter().append("g")
+      .attr("class", "node")
+      .attr("transform", function(d) { return "translate(" + d.y + "," + d.x + ")"; })
+
+  node.append("circle")
+      .attr("r", 4.5);
+console.log(clusters.children[0])
+  node.append("text")
+      .attr("dx", function(d) { return d.children ? -8 : 8; })
+      .attr("dy", 3)
+      .insert("a")
+    //   console.log(d.children)
+      .attr('href', function(d) { return `https://www.google.com/search?q=${d.name} drink` })
+    //   console.log(d.name.children)
+      .attr('target', "_blank")
+      .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
+      .text(function(d) { return d.name; });
+
+d3.select(self.frameElement).style("height", height + "px");
+
+</script>
+</body>
