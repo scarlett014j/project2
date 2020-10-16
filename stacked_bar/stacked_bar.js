@@ -1,4 +1,4 @@
-d3.json("glass.json").then(function(data) {
+d3.json("fake.json").then(function(data) {
     console.log(data);
     });
 
