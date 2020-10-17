@@ -34,20 +34,20 @@ var clusters =
  "children": [
   {"name": "tequila",
    "children": [
-    {"name": "3 Mile Long Island Iced Tea",},
+    {"name": "3-Mile Long Island Iced Tea",},
     {"name": "Bloody Maria",},
     {"name": "Blue Margarita",},
     {"name": "Gideon's Green Dinosaur",},
     {"name":"Long Island Iced Tea",},
     {"name":"Long Island Tea",},
     {"name":"Margarita",},
-    {"name":"Radioctive Long Island Iced Tea",},
+    {"name":"Radioactive Long Island Iced Tea",},
     {"name":"Strawberry Margarita",},
     {"name":"Tequila Fizz",},
     {"name":"Tequila Sour",},
     {"name":"Tommy's Margarita",},
     {"name":"Vampiro",},
-    {"name":"Cheery Electric Lemonade",},
+    {"name":"Cherry Electric Lemonade",},
     {"name":"Paloma",},
     {"name":"Pineapple Paloma",},
     {"name":"Smashed Watermelon Margarita",},
@@ -347,7 +347,8 @@ console.log(clusters.children[0])
       .attr("dy", 3)
       .insert("a")
     //   console.log(d.children)
-      .attr('href', function(d) { return `https://www.google.com/search?q=${d.name} drink` })
+      .attr('href', function(d) { return `/drink.html?drink=${encodeURIComponent(d.name)}` })
+      .attr('target', "_blank")
     //   console.log(d.name.children)
       .attr('target', "_blank")
       .style("text-anchor", function(d) { return d.children ? "end" : "start"; })
